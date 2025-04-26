@@ -22,3 +22,16 @@ export const tokenData = [
   { id: 8, src: Base, size: 85, speed: 0.3 },
   { id: 9, src: BSC, size: 60, speed: 0.3 },
 ];
+
+export const tokens = [
+  { id: "eth", name: "ETH", icon: Ethereum },
+  { id: "bsc", name: "BSC", icon: BSC },
+  { id: "ftm", name: "FTM", icon: Fantom },
+  { id: "avax", name: "AVAX", icon: Avalanche },
+  { id: "cro", name: "CRO", icon: Cronos },
+  { id: "arb", name: "ARB", icon: Arbitrum },
+  { id: "poly", name: "POLY", icon: Polygon },
+  { id: "base", name: "BASE", icon: Base },
+  { id: "sol", name: "SOL", icon: Solana },
+  // { id: "sonic", name: "SONIC", icon: "/tokens/cro.png" },
+];
