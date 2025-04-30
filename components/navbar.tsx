@@ -73,10 +73,10 @@ export function Navbar() {
         </DropdownMenu>
 
         {/* Search */}
-        <div className="relative hidden md:flex items-center">
+        <div className="relative flex items-center ml-4">
           <Input
             type="text"
-            placeholder="Search Token Address"
+            placeholder="Search Token Address..."
             className="bg-transparent border-[#333] text-white w-[200px] rounded-full pl-4 pr-10"
           />
           <Search size={18} className="absolute right-3 text-gray-400" />
@@ -89,7 +89,7 @@ export function Navbar() {
 
         {/* Login Button */}
         <Button className="bg-gradient-to-r from-[#c81d77] to-[#7d1d8b] hover:from-[#d41e80] hover:to-[#8a1e9a] text-white rounded-lg">
-          Connect Wallet
+          Fetch Data
         </Button>
       </div>
     </nav>

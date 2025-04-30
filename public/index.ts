@@ -8,6 +8,7 @@ import Cronos from "./assets/cro-logo.png";
 import Base from "./assets/base-logo.png";
 import BSC from "./assets/bsc-logo.png";
 import Logo from "./logo.svg";
+import Sonic from "./assets/sonic-logo.svg";
 
 export {
   Arbitrum,
@@ -20,4 +21,5 @@ export {
   Base,
   BSC,
   Logo,
+  Sonic,
 };

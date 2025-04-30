@@ -8,6 +8,7 @@ import {
   Cronos,
   Base,
   BSC,
+  Sonic,
 } from "@/public";
 
 // Define token data with images and initial positions
@@ -28,10 +29,9 @@ export const tokens = [
   { id: "bsc", name: "BSC", icon: BSC },
   { id: "ftm", name: "FTM", icon: Fantom },
   { id: "avax", name: "AVAX", icon: Avalanche },
-  { id: "cro", name: "CRO", icon: Cronos },
   { id: "arb", name: "ARB", icon: Arbitrum },
   { id: "poly", name: "POLY", icon: Polygon },
   { id: "base", name: "BASE", icon: Base },
   { id: "sol", name: "SOL", icon: Solana },
-  // { id: "sonic", name: "SONIC", icon: "/tokens/cro.png" },
+  { id: "sonic", name: "SONIC", icon: Sonic },
 ];

@@ -4,7 +4,7 @@ import { ThemeProvider } from "@/lib/theme-providers";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <main lang="en" suppressHydrationWarning>
+    <main>
       <Navbar />
       <ThemeProvider
         attribute="class"
