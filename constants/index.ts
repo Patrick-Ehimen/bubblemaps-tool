@@ -8,7 +8,6 @@ import {
   Cronos,
   Base,
   BSC,
-  Sonic,
 } from "@/public";
 
 // Define token data with images and initial positions
@@ -25,13 +24,14 @@ export const tokenData = [
 ];
 
 export const tokens = [
-  { id: "eth", name: "ETH", icon: Ethereum },
-  { id: "bsc", name: "BSC", icon: BSC },
-  { id: "ftm", name: "FTM", icon: Fantom },
-  { id: "avax", name: "AVAX", icon: Avalanche },
-  { id: "arb", name: "ARB", icon: Arbitrum },
-  { id: "poly", name: "POLY", icon: Polygon },
-  { id: "base", name: "BASE", icon: Base },
-  { id: "sol", name: "SOL", icon: Solana },
-  { id: "sonic", name: "SONIC", icon: Sonic },
+  { id: "eth", name: "ETH", icon: Ethereum, hex: "0x1" },
+  { id: "bsc", name: "BSC", icon: BSC, hex: "0x38" },
+  { id: "fantom", name: "FTM", icon: Fantom, hex: "0xfa" },
+  { id: "avalanche", name: "AVAX", icon: Avalanche, hex: "0xa86a" },
+  { id: "arbitrum", name: "ARB", icon: Arbitrum, hex: "0xA4B1" },
+  { id: "polygon", name: "POLY", icon: Polygon, hex: "0x89" },
+  { id: "base", name: "BASE", icon: Base, hex: "0x2105" },
+  { id: "cronos", name: "CRONOS", icon: Cronos, hex: "0x19" },
+  { id: "solana", name: "SOL", icon: Solana },
+  // { id: "sonic", name: "SONIC", icon: Sonic },
 ];

@@ -15,9 +15,30 @@ import { Input } from "@/components/ui/input";
 import { tokens } from "@/constants";
 import { Logo } from "@/public";
 import { ThemeToggle } from "./toggle-theme";
+import { useBubbleContext } from "@/context/bubble-context";
+import { fetchMapData } from "@/service/fetchData";
 
 export function Navbar() {
-  const [selectedToken, setSelectedToken] = useState(tokens[0]);
+  const [selectedToken, setSelectedToken] = useState<(typeof tokens)[0]>(
+    tokens[0]
+  );
+  const {
+    setSelectedToken: setGlobalToken,
+    setSearchAddress,
+    setMapData,
+  } = useBubbleContext();
+  const [searchValue, setSearchValue] = useState("");
+
+  // Ensure the selected token is updated globally when changed
+  const handleTokenSelect = (token: (typeof tokens)[0]) => {
+    setSelectedToken(token);
+    setGlobalToken(token.id || "");
+  };
+
+  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchValue(e.target.value);
+    setSearchAddress(e.target.value);
+  };
 
   return (
     <nav className="flex items-center justify-between px-4 py-3 bg-black">
@@ -56,7 +77,7 @@ export function Navbar() {
             {tokens.map((token) => (
               <DropdownMenuItem
                 key={token.id}
-                onClick={() => setSelectedToken(token)}
+                onClick={() => handleTokenSelect(token)}
                 className="flex items-center gap-3 py-2 hover:bg-[#222] cursor-pointer"
               >
                 <Image
@@ -73,22 +94,32 @@ export function Navbar() {
         </DropdownMenu>
 
         {/* Search */}
-        <div className="relative flex items-center ml-4">
-          <Input
-            type="text"
-            placeholder="Search Token Address..."
-            className="bg-transparent border-[#333] text-white w-[200px] rounded-full pl-4 pr-10"
-          />
-          <Search size={18} className="absolute right-3 text-gray-400" />
+        <div className="relative flex items-center ml-4 gap-2">
+          <div className="relative">
+            <Input
+              type="text"
+              value={searchValue}
+              onChange={handleSearch}
+              placeholder="Search Token Address..."
+              className="bg-transparent border-[#333] text-white w-[200px] rounded-full pl-4 pr-10"
+            />
+            <Search
+              size={18}
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400"
+            />
+          </div>
         </div>
       </div>
 
-      {/* Right side items */}
       <div className="flex items-center gap-4">
         <ThemeToggle />
 
-        {/* Login Button */}
-        <Button className="bg-gradient-to-r from-[#c81d77] to-[#7d1d8b] hover:from-[#d41e80] hover:to-[#8a1e9a] text-white rounded-lg">
+        <Button
+          onClick={() =>
+            fetchMapData(selectedToken.id || "", searchValue, setMapData)
+          }
+          className="bg-gradient-to-r from-[#c81d77] to-[#7d1d8b] hover:from-[#d41e80] hover:to-[#8a1e9a] text-white rounded-lg cursor-pointer"
+        >
           Fetch Data
         </Button>
       </div>
