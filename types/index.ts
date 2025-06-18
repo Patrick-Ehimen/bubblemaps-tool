@@ -60,3 +60,35 @@ export interface AppState {
   height: number;
   selectedChain: string;
 }
+
+export interface TokenMetadata {
+  address: string;
+  address_label: string;
+  name: string;
+  symbol: string;
+  decimals: number;
+  logo: string;
+  logo_hash: string;
+  thumbnail: string;
+  total_supply: string;
+  total_supply_formatted: string;
+  fully_diluted_valuation: string;
+  block_number: string;
+  validated: boolean;
+  created_at: string;
+  possible_spam: string;
+  verified_contract: string;
+  categories: string[];
+  links: Record<string, string>;
+}
+
+export interface Transaction {
+  transactionHash: string;
+  transactionType: "buy" | "sell";
+  blockTimestamp: string;
+  totalValueUsd: number;
+  walletAddress: string;
+  pairLabel: string;
+  exchangeName: string;
+  exchangeLogo: string;
+}

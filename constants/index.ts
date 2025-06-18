@@ -35,3 +35,24 @@ export const tokens = [
   { id: "solana", name: "SOL", icon: Solana },
   // { id: "sonic", name: "SONIC", icon: Sonic },
 ];
+
+export const tokenHexId = [
+  { id: "eth", hex: "0x1" },
+  { id: "bsc", hex: "0x38" },
+  { id: "fantom", hex: "0xfa" },
+  { id: "avalanche", hex: "0xa86a" },
+  { id: "arbitrum", hex: "0xA4B1" },
+  { id: "polygon", hex: "0x89" },
+  { id: "base", hex: "0x2105" },
+  { id: "cronos", hex: "0x19" },
+  { id: "solana", icon: Solana },
+  // { id: "sonic", name: "SONIC", icon: Sonic },
+];
+
+// Create a mapping object for hex values
+/* This code snippet is creating a mapping object called `tokensHex` that maps token IDs to their
+corresponding hexadecimal values. */
+export const tokensHex = tokens.reduce((acc, token) => {
+  acc[token.id] = token.hex; // Map token id to hex value
+  return acc;
+}, {} as Record<string, string | undefined>);

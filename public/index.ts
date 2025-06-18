@@ -9,6 +9,7 @@ import Base from "./assets/base-logo.png";
 import BSC from "./assets/bsc-logo.png";
 import Logo from "./logo.svg";
 import Sonic from "./assets/sonic-logo.svg";
+import Etherscan from "./assets/etherscan-logo.jpeg";
 
 export {
   Arbitrum,
@@ -22,4 +23,5 @@ export {
   BSC,
   Logo,
   Sonic,
+  Etherscan,
 };

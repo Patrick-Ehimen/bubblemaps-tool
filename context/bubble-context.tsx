@@ -1,5 +1,16 @@
 "use client";
 
+/**
+ * The above code defines a context provider and hook in TypeScript React for managing selected token,
+ * search address, and map data.
+ * @param  - The code you provided is setting up a context in React using the `createContext` function
+ * from React. This context is called `BubbleContext` and it provides state and functions related to a
+ * selected token, search address, and map data.
+ * @returns The code snippet provided defines a React context called `BubbleContext` along with a
+ * provider component `BubbleProvider` and a custom hook `useBubbleContext` to access the context
+ * values.
+ */
+
 import { createContext, useContext, useState, ReactNode } from "react";
 import { tokens } from "@/constants";
 

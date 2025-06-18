@@ -4,6 +4,7 @@ export const config = {
   colors: {
     whale: "#ff6b8b",
     traders: "#4ade80",
+    contract: "#3b82f6",
     linkDefault: "#8b95a8",
     linkHighlight: "#3a6df0",
   },
@@ -19,10 +20,10 @@ export const config = {
       baseUrl: "https://optimistic.etherscan.io",
     },
     sol: { name: "Solscan", baseUrl: "https://solscan.io" },
-    sonic: {
-      name: "Sonic Explorer",
-      baseUrl: "https://explorer.sonic.network",
-    },
+    // sonic: {
+    //   name: "Sonic Explorer",
+    //   baseUrl: "https://explorer.sonic.network",
+    // },
   },
 };
 
