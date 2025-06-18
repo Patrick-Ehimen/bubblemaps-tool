@@ -2,6 +2,14 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "logo.moralis.io",
+      },
+    ],
+  },
   env: { ALCHEMY_API_KEY: process.env.ALCHEMY_API_KEY },
   async headers() {
     return [
